@@ -218,3 +218,7 @@ Go through the ```learn-chaincode```:
 
 * learn-chaincode, https://github.com/IBM-Blockchain/learn-chaincode.git
 
+# Where to Join
+
+* [Hyperledger Taipei: Chaincode Night](https://www.meetup.com/Hyperledger-Taipei/events/239564790/)
+
