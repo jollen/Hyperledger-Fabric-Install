@@ -19,9 +19,9 @@ $ sudo mv go /usr/local
 Put these three lines to ```~/.profile```:
 
 ```
-$ export GOROOT=/usr/local/go 
-$ export GOPATH=$HOME/go
-$ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export GOROOT=/usr/local/go 
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
 
 Install Node.js:
