@@ -201,7 +201,7 @@ Edit ```mycreds_docker_compose.json ```:
 			"api_host": "172.17.0.2",
 			"api_port": 7050,
 			"type": "peer",
-			"id": "ubuntu_vp0_1"
+			"id": "vp0"
 		}],
 		"users": [
 		]
