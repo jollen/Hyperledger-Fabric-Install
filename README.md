@@ -24,7 +24,13 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
 
-Install Node.js:
+You should source the profile by ```$ . ~/.profile``` or logout/login again. Then, create the GOPATH directory:
+
+```
+$ mkdir -p $GOPATH
+```
+
+Next, install Node.js v6.x:
 
 ```
 $ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -33,7 +39,7 @@ $ sudo apt-get install -y nodejs
 
 ## Install Docker CE, 
 
-Go through the documents first:
+It's recommended that go through the documents first:
 
 * https://docs.docker.com/engine/installation/linux/ubuntu/#install-using-the-repository
 * https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user
@@ -79,10 +85,12 @@ Install Docker Compose:
 
 ## Install Fabric 1.0
 
-Go through the documents first:
+Also, it is recommended that go through the documents first:
 
 * https://domsteil.com/2017/04/22/how-to-setup-hyperledger-fabric-v1-0-on-aws/
 * https://wiki.hyperledger.org/groups/twgc/fabric-doc/getting_started.md
+
+The command sequence to install Hyperledger Fabric v1.0.0-beta:
 
 ```
 $ sudo apt-get update
@@ -90,7 +98,7 @@ $ sudo apt install libtool libltdl-dev git
 ```
 
 ```
-$ cd <yourgodirectoryname>
+$ cd $GOPATH
 $ mkdir src
 $ cd src
 $ mkdir github.com
@@ -98,6 +106,8 @@ $ cd github.com
 $ mkdir hyperledger
 $ cd hyperledger
 ```
+
+Download and compile Hyperledger Fabric. You may need to install *make* by ```$ sudo apt-get install make ``` in prior to compile the source:
 
 ```
 $ git clone https://github.com/hyperledger/fabric.git
@@ -122,14 +132,25 @@ chmod +x download-dockerimages.sh
 
 ```
 $ docker images
-REPOSITORY                     TAG                  IMAGE ID            CREATED             SIZE
-hyperledger/fabric-couchdb     x86_64-1.0.0-alpha   f3ce31e25872        2 months ago        1.51 GB
-hyperledger/fabric-kafka       x86_64-1.0.0-alpha   589dad0b93fc        2 months ago        1.3 GB
-hyperledger/fabric-zookeeper   x86_64-1.0.0-alpha   9a51f5be29c1        2 months ago        1.31 GB
-hyperledger/fabric-orderer     x86_64-1.0.0-alpha   5685fd77ab7c        2 months ago        182 MB
-hyperledger/fabric-peer        x86_64-1.0.0-alpha   784c5d41ac1d        2 months ago        184 MB
-hyperledger/fabric-javaenv     x86_64-1.0.0-alpha   a08f85d8f0a9        2 months ago        1.42 GB
-hyperledger/fabric-ccenv       x86_64-1.0.0-alpha   91792014b61f        2 months ago        1.29 GB
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+hyperledger/fabric-tools       latest              ae6b0f53cb70        4 days ago          1.32 GB
+hyperledger/fabric-tools       x86_64-1.0.0-beta   ae6b0f53cb70        4 days ago          1.32 GB
+hyperledger/fabric-couchdb     latest              31bbbec3d853        4 days ago          1.48 GB
+hyperledger/fabric-couchdb     x86_64-1.0.0-beta   31bbbec3d853        4 days ago          1.48 GB
+hyperledger/fabric-kafka       latest              c4ac1c9a4797        4 days ago          1.3 GB
+hyperledger/fabric-kafka       x86_64-1.0.0-beta   c4ac1c9a4797        4 days ago          1.3 GB
+hyperledger/fabric-zookeeper   latest              2c4ebacb6f00        4 days ago          1.31 GB
+hyperledger/fabric-zookeeper   x86_64-1.0.0-beta   2c4ebacb6f00        4 days ago          1.31 GB
+hyperledger/fabric-orderer     latest              11ff350dd297        4 days ago          179 MB
+hyperledger/fabric-orderer     x86_64-1.0.0-beta   11ff350dd297        4 days ago          179 MB
+hyperledger/fabric-peer        latest              e01c2b645f11        4 days ago          182 MB
+hyperledger/fabric-peer        x86_64-1.0.0-beta   e01c2b645f11        4 days ago          182 MB
+hyperledger/fabric-javaenv     latest              61c188dca542        4 days ago          1.42 GB
+hyperledger/fabric-javaenv     x86_64-1.0.0-beta   61c188dca542        4 days ago          1.42 GB
+hyperledger/fabric-ccenv       latest              7034cca1918d        4 days ago          1.29 GB
+hyperledger/fabric-ccenv       x86_64-1.0.0-beta   7034cca1918d        4 days ago          1.29 GB
+hyperledger/fabric-ca          latest              e549e8c53c2e        4 days ago          238 MB
+hyperledger/fabric-ca          x86_64-1.0.0-beta   e549e8c53c2e        4 days ago          238 MB
 ```
 
 ## Create Custom Docker Compose
