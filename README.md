@@ -130,6 +130,8 @@ chmod +x download-dockerimages.sh
 ./download-dockerimages.sh
 ```
 
+There are the images:
+
 ```
 $ docker images
 REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
@@ -151,6 +153,16 @@ hyperledger/fabric-ccenv       latest              7034cca1918d        4 days ag
 hyperledger/fabric-ccenv       x86_64-1.0.0-beta   7034cca1918d        4 days ago          1.29 GB
 hyperledger/fabric-ca          latest              e549e8c53c2e        4 days ago          238 MB
 hyperledger/fabric-ca          x86_64-1.0.0-beta   e549e8c53c2e        4 days ago          238 MB
+```
+
+Or, pull the *fabric-peer* and *fabric-baseimage* needed for the Marble application (described in the following section).
+
+```
+$ docker pull hyperledger/fabric-peer:latest
+$ docker pull hyperledger/fabric-baseimage:x86_64-0.2.2
+$ docker tag \
+hyperledger/fabric-baseimage:x86_64-0.2.2 \
+hyperledger/fabric-baseimage:latest
 ```
 
 ## Create Custom Docker Compose
