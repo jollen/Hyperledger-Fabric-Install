@@ -1,6 +1,6 @@
 vp0:
   container_name: vp0
-  image: hyperledger/fabric-peer:x86_64-1.0.0-alpha
+  image: hyperledger/fabric-peer:x86_64-1.0.0-beta
   ports:
     - "7050:7050"
     - "7051:7051"
