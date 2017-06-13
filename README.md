@@ -155,7 +155,9 @@ hyperledger/fabric-ca          latest              e549e8c53c2e        4 days ag
 hyperledger/fabric-ca          x86_64-1.0.0-beta   e549e8c53c2e        4 days ago          238 MB
 ```
 
-Or, pull the *fabric-peer* and *fabric-baseimage* needed for the Marble application (described in the following section).
+### Pull the latest fabric-peer image
+
+Or, pull the *fabric-peer* and *fabric-baseimage* needed by the Marble application (described in the following section).
 
 ```
 $ docker pull hyperledger/fabric-peer:latest
